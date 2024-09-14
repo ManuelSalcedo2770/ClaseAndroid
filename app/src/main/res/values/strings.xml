@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Superheroes</string>
+    <string name="app_name">HeroesApp</string>
+    <string name="email">Ingresa tu supercorreo</string>
+    <string name="password">Superpassword</string>
+    <string name="login">Iniciar supersesión</string>
+    <string name="welcome">Bienvenido a tu app de superheroes</string>
+    <string name="welcome_message">"Hola de nuevo, superheroe"</string>
 </resources>

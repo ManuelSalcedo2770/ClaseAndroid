@@ -10,7 +10,7 @@ data class Studios(
     val publisherId : Int
 ){
     companion object {
-        val Studios = mutableListOf<Studios>(
+        val studios = mutableListOf<Studios>(
 
 // Marvel
             Studios(1, "Moon Knight",

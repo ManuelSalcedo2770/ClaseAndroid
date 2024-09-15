@@ -17,37 +17,38 @@ import com.example.superheroes.models.Publisher
 import com.example.superheroes.models.User
 
 class PublisherActivity : AppCompatActivity() {
-    lateinit var usernameTV : TextView
+    lateinit var userTV : TextView
     lateinit var logoutBtn : ImageView
-    lateinit var publishers_recyclerview : RecyclerView
+    lateinit var publisherRW : RecyclerView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_publisher)
-        val sharedPreferences = getSharedPreferences("myPrefs", MODE_PRIVATE)
-        usernameTV = findViewById(R.id.usernameTV)
-        logoutBtn = findViewById(R.id.logoutBtn)
-        publishers_recyclerview = findViewById(R.id.publishers_recyclerview)
+
+        val sharedPreferences = getSharedPreferences("preferences", MODE_PRIVATE)
+        userTV = findViewById(R.id.username)
+        logoutBtn = findViewById(R.id.logout_btn)
+        publisherRW = findViewById(R.id.publisher_recyclerview)
 
         val userEmail = sharedPreferences.getString("LOGGED_USER", null)
 
         val loggedUser = User.users.find { it.email == userEmail }
         if (loggedUser != null) {
-            usernameTV.text = loggedUser.computedName
+            userTV.text = loggedUser.computedName
         } else {
-            usernameTV.text = "Hola"
+            userTV.text = "Welcome back!"
         }
 
-        publishers_recyclerview.adapter = PublisherAdapter(Publisher.publishers){ publisher->
-            Log.i("The following publisher was clicked: ", publisher.name)
+        publisherRW.adapter = PublisherAdapter(Publisher.publishers){ publisher->
+            Log.i("Navigating to heroes for: ", publisher.name)
             val intent = Intent(this@PublisherActivity,HeroesActivity::class.java)
             intent.putExtra("publisherId",publisher.id)
             startActivity(intent)
         }
-        publishers_recyclerview.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
+        publisherRW.layoutManager = GridLayoutManager(this,2)
 
         logoutBtn.setOnClickListener {
-            Log.i("LOGOUT","Logging out... bye :)")
+            Log.i("LOGOUT","Logging out of app")
             val editor = sharedPreferences.edit()
             editor.remove("isLogged")
             editor.apply()

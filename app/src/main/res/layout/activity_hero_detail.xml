@@ -39,52 +39,56 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.60" />
 
+
     <TextView
         android:id="@+id/hero_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="68dp"
+        android:fontFamily="@font/comic"
         android:text="Hero's Name"
         android:textColor="@color/floral"
-        android:fontFamily="@font/comic"
         android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/guideV2"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="@id/guideV1"
         app:layout_constraintBottom_toTopOf="@+id/guideH1"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintEnd_toEndOf="@id/guideV2"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@id/guideV1" />
 
     <ImageView
         android:id="@+id/hero_image"
         android:layout_width="300dp"
         android:layout_height="300dp"
+        android:layout_marginBottom="44dp"
         android:src="@drawable/login"
         app:layout_constraintBottom_toTopOf="@+id/guideH2"
         app:layout_constraintEnd_toStartOf="@+id/guideV2"
-        app:layout_constraintHorizontal_bias="0.50"
         app:layout_constraintStart_toStartOf="@+id/guideV1"
-        app:layout_constraintVertical_bias="0.808" />
+        />
 
-
-    <TextView
-        android:id="@+id/hero_description"
-        android:layout_width="0dp"
+    <FrameLayout
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:text="Description"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textAlignment="gravity"
-        android:gravity="center"
-        android:textColor="@color/lightblue"
-        android:fontFamily="@font/farfromhome"
-        android:textFontWeight="700"
+        android:background="@color/marino"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/guideV2"
-        app:layout_constraintHorizontal_bias="0.512"
-        app:layout_constraintStart_toEndOf="@id/guideV1"
-        app:layout_constraintTop_toBottomOf="@id/hero_image"
-        app:layout_constraintVertical_bias="0.119" />
+        app:layout_constraintEnd_toEndOf="@id/guideV2"
+        app:layout_constraintStart_toStartOf="@id/guideV1"
+        app:layout_constraintTop_toBottomOf="@+id/hero_image">
+
+        <TextView
+            android:id="@+id/hero_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/farfromhome"
+            android:gravity="center"
+            android:text="Description"
+            android:textAlignment="center"
+            android:textColor="@color/lightblue"
+            android:textFontWeight="700"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </FrameLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

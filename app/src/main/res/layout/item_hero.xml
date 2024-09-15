@@ -9,30 +9,31 @@
 
     <ImageView
         android:id="@+id/img_hero_preview"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
+        android:layout_width="360dp"
+        android:layout_height="360dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/circle"
         android:scaleType="fitCenter"
         android:src="@drawable/login"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.072"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/hero_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="309dp"
+        android:layout_height="96dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/spidercomic"
         android:padding="8dp"
         android:text="Name"
+        android:textColor="@color/lightblue"
         android:textFontWeight="900"
-        android:textSize="18sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.201"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/img_hero_preview" />
 </androidx.constraintlayout.widget.ConstraintLayout>

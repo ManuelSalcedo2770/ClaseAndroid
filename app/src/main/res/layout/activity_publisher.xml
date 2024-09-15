@@ -28,7 +28,7 @@
 
             <TextView
                 android:id="@+id/username"
-                android:text="Welcome back, Manu"
+                android:text="Welcome back!"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
@@ -51,20 +51,6 @@
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/publishersTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Publishers"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/headerLayout"
-            app:layout_constraintVertical_bias="0.0" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/publisher_recyclerview"
@@ -74,7 +60,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/publishersTV"
+            app:layout_constraintTop_toBottomOf="@+id/headerLayout"
             app:layout_constraintVertical_bias="0.0" />
 
 
